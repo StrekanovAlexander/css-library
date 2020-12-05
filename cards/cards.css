@@ -1,0 +1,55 @@
+.container {
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.card {
+  background-color: gray;
+  width: 150px;
+}
+
+.card__landscape, 
+.card__portrait, 
+.card__square {
+  position: relative;
+  width: 100%;
+}
+
+.card__square {
+  padding-bottom: 100%;
+}
+
+.card__landscape {
+  padding-bottom: 66%;
+}
+
+.card__portrait {
+  padding-bottom: 133%;
+}
+
+.card__container {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.card__caption {
+  background-color: rgba(0,0,0,.5);
+  bottom: 0;
+  color: white;
+  height: 25%;
+  padding: 8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.card__container > img {
+  width: 100%;
+}
+
