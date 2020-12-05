@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   background-color: lightgray;
   display: flex;
@@ -41,12 +45,22 @@
   background-color: rgba(0,0,0,.5);
   bottom: 0;
   color: white;
-  height: 25%;
   padding: 8px;
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 9;
+}
+
+.card__caption_half {
+  height: 50%;
+}
+
+.card__caption_quarter {
+  height: 25%;
+}
+
+.card__caption_third {
+  height: 33.33%;
 }
 
 .card__container > img {
