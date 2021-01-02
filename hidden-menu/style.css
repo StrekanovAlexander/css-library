@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+.btn-menu {
+  position: fixed;
+  top: 10em;
+  left: 4em;
+  cursor: pointer;
+  width: 25px;
+  z-index: 2;
+}
+
+.btn-menu span {
+  background-color: black;
+  display: block;
+  height: 3px;
+  margin: 5px 0 0;
+  position: relative;
+  transition: all 0.1s linear 0.1s;
+}
+.btn-menu span.first {
+  margin-top: 0;
+}
+
+.hidden-menu {
+  display: block;
+  left: 4em;
+  list-style: none;
+  position: fixed;
+  top: 12em;
+  z-index: 1;
+}
+.hidden-menu li {
+  margin: 0.35em 0;
+  overflow: hidden;
+}
+.hidden-menu li a {
+  display: block;
+  margin-left: -3em;
+  padding: 0.25em 0;
+  transition: margin-left 0.2s;
+}
+.hidden-menu li a.first {
+  transition-delay: 0s;
+}
+.hidden-menu li a.second {
+  transition-delay: 0.1s;
+}
+.hidden-menu li a.third {
+  transition-delay: 0.2s;
+}
+
+.hidden-menu-ticker {
+  display: none;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu li a {
+  margin-left: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 8px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -8px;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 5em 4em 2em;
+}
+
+/*# sourceMappingURL=style.css.map */
